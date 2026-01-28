@@ -1,6 +1,30 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Database } from 'lucide-react';
+import { Menu, X, Database, ChevronRight, Home } from 'lucide-react';
+
+const routeLabels: { [key: string]: string } = {
+  '': 'Home',
+  'data-strategy': 'Data Strategy',
+  'data-governance': 'Data Governance',
+  'master-data-management': 'Master Data Management',
+  'generative-ai': 'Generative AI',
+  'data-practice': 'Data Practice',
+  'technology-stack': 'Technology',
+  'platforms': 'Platforms',
+  'case-studies': 'Case Studies',
+  'data-transformation': 'Data Transformation',
+  'contact': 'Contact',
+  // Platform deep dives
+  'microsoft': 'Microsoft',
+  'snowflake': 'Snowflake',
+  'aws': 'AWS',
+  'databricks': 'Databricks',
+  'google-cloud': 'Google Cloud',
+  'tableau': 'Tableau',
+  'collibra': 'Collibra',
+  'cloudera': 'Cloudera',
+  'ai-ml': 'AI & ML Platforms'
+};
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,8 +48,21 @@ const Header: React.FC = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  // Generate breadcrumbs
+  const pathnames = location.pathname.split('/').filter((x) => x);
+  const showBreadcrumbs = pathnames.length > 0;
+
+  const breadcrumbs = [{ label: 'Home', path: '/' }];
+  let currentPath = '';
+  pathnames.forEach((segment) => {
+    currentPath += `/${segment}`;
+    const label = routeLabels[segment] || segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
+    breadcrumbs.push({ label, path: currentPath });
+  });
+
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
+      {/* Main Navigation */}
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
@@ -85,6 +122,45 @@ const Header: React.FC = () => {
           </div>
         )}
       </nav>
+
+      {/* Breadcrumbs - part of the fixed header */}
+      {showBreadcrumbs && (
+        <div className="bg-gray-50 border-t border-gray-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ol className="flex items-center h-9 space-x-2 text-sm">
+              {breadcrumbs.map((crumb, index) => {
+                const isLast = index === breadcrumbs.length - 1;
+
+                return (
+                  <li key={crumb.path} className="flex items-center">
+                    {index > 0 && (
+                      <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
+                    )}
+                    {index === 0 ? (
+                      <Link
+                        to={crumb.path}
+                        className="text-gray-500 hover:text-blue-600 transition-colors flex items-center"
+                      >
+                        <Home className="w-4 h-4" />
+                        <span className="sr-only">Home</span>
+                      </Link>
+                    ) : isLast ? (
+                      <span className="text-gray-900 font-medium">{crumb.label}</span>
+                    ) : (
+                      <Link
+                        to={crumb.path}
+                        className="text-gray-500 hover:text-blue-600 transition-colors"
+                      >
+                        {crumb.label}
+                      </Link>
+                    )}
+                  </li>
+                );
+              })}
+            </ol>
+          </div>
+        </div>
+      )}
     </header>
   );
 };
