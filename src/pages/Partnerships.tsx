@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
-import { Award, Cloud, Database, BarChart3, Shield, Star } from 'lucide-react';
+import { Award, Cloud, Database, BarChart3, Shield, Star, ArrowRight } from 'lucide-react';
 
 const Partnerships: React.FC = () => {
   const getColorClasses = (color: string) => {
@@ -71,7 +72,8 @@ const Partnerships: React.FC = () => {
         'Real-time Analytics',
         'Collaborative Notebooks'
       ],
-      color: 'red'
+      color: 'red',
+      deepDiveLink: '/partnerships/databricks'
     },
     {
       name: 'Google Cloud',
@@ -229,6 +231,14 @@ const Partnerships: React.FC = () => {
                         </li>
                       ))}
                     </ul>
+                    {(partner as any).deepDiveLink && (
+                      <Link
+                        to={(partner as any).deepDiveLink}
+                        className={`inline-flex items-center mt-4 ${colorClasses.text} font-semibold hover:underline`}
+                      >
+                        Learn More <ArrowRight className="w-4 h-4 ml-1" />
+                      </Link>
+                    )}
                   </div>
                 </div>
               );

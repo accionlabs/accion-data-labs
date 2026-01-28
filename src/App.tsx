@@ -12,6 +12,7 @@ import CaseStudies from './pages/CaseStudies';
 import Partnerships from './pages/Partnerships';
 import DataTransformation from './pages/DataTransformation';
 import Contact from './pages/Contact';
+import Databricks from './pages/Databricks';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/technology-stack" element={<TechnologyStack />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/partnerships" element={<Partnerships />} />
+          <Route path="/partnerships/databricks" element={<Databricks />} />
           <Route path="/data-transformation" element={<DataTransformation />} />
           <Route path="/contact" element={<Contact />} />
         </Route>
