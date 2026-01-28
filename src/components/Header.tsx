@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Database, ChevronRight, Home } from 'lucide-react';
+import SearchBar from './SearchBar';
 
 const routeLabels: { [key: string]: string } = {
   '': 'Home',
@@ -87,6 +88,9 @@ const Header: React.FC = () => {
                 {item.name}
               </Link>
             ))}
+            <div className="ml-2 pl-2 border-l border-gray-200">
+              <SearchBar />
+            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -103,6 +107,9 @@ const Header: React.FC = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="lg:hidden pb-4">
+            <div className="px-3 py-2 mb-2">
+              <SearchBar />
+            </div>
             <div className="flex flex-col space-y-1">
               {navigation.map((item) => (
                 <Link
