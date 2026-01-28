@@ -44,7 +44,8 @@ const Partnerships: React.FC = () => {
         'Snowpark for Python',
         'Data Engineering'
       ],
-      color: 'cyan'
+      color: 'cyan',
+      deepDiveLink: '/partnerships/snowflake'
     },
     {
       name: 'Amazon Web Services (AWS)',

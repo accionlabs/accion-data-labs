@@ -13,6 +13,7 @@ import Partnerships from './pages/Partnerships';
 import DataTransformation from './pages/DataTransformation';
 import Contact from './pages/Contact';
 import Databricks from './pages/Databricks';
+import Snowflake from './pages/Snowflake';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/partnerships" element={<Partnerships />} />
           <Route path="/partnerships/databricks" element={<Databricks />} />
+          <Route path="/partnerships/snowflake" element={<Snowflake />} />
           <Route path="/data-transformation" element={<DataTransformation />} />
           <Route path="/contact" element={<Contact />} />
         </Route>
