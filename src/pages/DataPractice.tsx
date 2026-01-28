@@ -39,13 +39,13 @@ const DataPractice: React.FC = () => {
     },
     {
       name: 'Mandar Garge',
-      title: 'Enterprise Transformation (Business & Technology) Strategy Leader, Advisor',
+      title: 'SVP | Global Head - Strategy Consulting & Enterprise Transformation',
       experience: '27+ years of experience',
-      background: 'A Digital Transformation leader with extensive experience in Enterprise IT and Product Development across multiple geographies and industry domains in various leadership capacities. Holds Master\'s degrees from Boston University (Computer Science) and Oklahoma State University (Mechanical Engineering).',
+      background: '27 years of experience in Enterprise IT, ITES and Product Development in various Biz+Tech leadership roles across US, Europe and India. Has designed and led large scale transformation programs. Currently leads Strategy Consulting for Enterprise customers formulating and formalizing their Enterprise Transformation programs and Roadmaps (Business, Enterprise Architecture and Data Transformation. Holds Master\'s degrees from Boston University (Computer Science) and Oklahoma State University (Mechanical Engineering).',
       expertise: 'Expert in Industry 4.0 roadmaps, Business and Tech transformation strategies and roadmaps, business process optimization, enterprise data, and organizational transformation strategies.',
       expertiseTags: ['Digital Transformation', 'Enterprise Architecture', 'Industry 4.0', 'Data Analytics', 'Business Process Optimization'],
       initials: 'MG',
-      photoUrl: 'https://www.accionlabs.com/hubfs/Accion%20HubSpot%202023/Leadership/mandar-Garge_500x500.jpg',
+      photoUrl: 'https://media.licdn.com/dms/image/v2/D4D03AQFjV8fs6TO_9g/profile-displayphoto-scale_400_400/B4DZqNob4.GgAg-/0/1763312780733?e=1771459200&v=beta&t=Eg0ZVJ_slAOUHcrq_p6jDwg5d_LYhSI825KdVrt0gOg',
       journeyPhases: ['Phase 1: Assess', 'Phase 4: Transform']
     },
     {
