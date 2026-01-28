@@ -14,6 +14,12 @@ import DataTransformation from './pages/DataTransformation';
 import Contact from './pages/Contact';
 import Databricks from './pages/Databricks';
 import Snowflake from './pages/Snowflake';
+import Microsoft from './pages/Microsoft';
+import AWS from './pages/AWS';
+import GoogleCloud from './pages/GoogleCloud';
+import Tableau from './pages/Tableau';
+import Collibra from './pages/Collibra';
+import Cloudera from './pages/Cloudera';
 
 function App() {
   return (
@@ -31,6 +37,12 @@ function App() {
           <Route path="/partnerships" element={<Partnerships />} />
           <Route path="/partnerships/databricks" element={<Databricks />} />
           <Route path="/partnerships/snowflake" element={<Snowflake />} />
+          <Route path="/partnerships/microsoft" element={<Microsoft />} />
+          <Route path="/partnerships/aws" element={<AWS />} />
+          <Route path="/partnerships/google-cloud" element={<GoogleCloud />} />
+          <Route path="/partnerships/tableau" element={<Tableau />} />
+          <Route path="/partnerships/collibra" element={<Collibra />} />
+          <Route path="/partnerships/cloudera" element={<Cloudera />} />
           <Route path="/data-transformation" element={<DataTransformation />} />
           <Route path="/contact" element={<Contact />} />
         </Route>

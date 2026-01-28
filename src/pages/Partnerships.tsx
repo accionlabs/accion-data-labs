@@ -30,7 +30,8 @@ const Partnerships: React.FC = () => {
         'Azure Synapse Analytics',
         'Azure Machine Learning'
       ],
-      color: 'blue'
+      color: 'blue',
+      deepDiveLink: '/partnerships/microsoft'
     },
     {
       name: 'Snowflake',
@@ -59,7 +60,8 @@ const Partnerships: React.FC = () => {
         'SageMaker ML Platform',
         'Glue ETL Services'
       ],
-      color: 'orange'
+      color: 'orange',
+      deepDiveLink: '/partnerships/aws'
     },
     {
       name: 'Databricks',
@@ -88,7 +90,8 @@ const Partnerships: React.FC = () => {
         'Looker Analytics',
         'Data Catalog'
       ],
-      color: 'green'
+      color: 'green',
+      deepDiveLink: '/partnerships/google-cloud'
     },
     {
       name: 'Tableau',
@@ -102,7 +105,8 @@ const Partnerships: React.FC = () => {
         'Mobile BI',
         'Data Storytelling'
       ],
-      color: 'blue'
+      color: 'blue',
+      deepDiveLink: '/partnerships/tableau'
     },
     {
       name: 'Collibra',
@@ -116,7 +120,8 @@ const Partnerships: React.FC = () => {
         'Data Quality',
         'Workflow Automation'
       ],
-      color: 'purple'
+      color: 'purple',
+      deepDiveLink: '/partnerships/collibra'
     },
     {
       name: 'Cloudera',
@@ -130,7 +135,8 @@ const Partnerships: React.FC = () => {
         'Machine Learning',
         'Operational Database'
       ],
-      color: 'indigo'
+      color: 'indigo',
+      deepDiveLink: '/partnerships/cloudera'
     }
   ];
 
