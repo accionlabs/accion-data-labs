@@ -59,9 +59,9 @@ const Home: React.FC = () => {
     },
     {
       icon: Award,
-      title: 'Partnerships',
-      description: 'Strategic partnerships with Microsoft, Snowflake, AWS, Databricks, and more.',
-      path: '/partnerships',
+      title: 'Platforms',
+      description: 'Deep expertise in Microsoft, Snowflake, AWS, Databricks, and more.',
+      path: '/platforms',
       color: 'orange'
     }
   ];
@@ -303,8 +303,8 @@ const Home: React.FC = () => {
                   Case Studies <ArrowRight className="ml-1 w-3 h-3" />
                 </Link>
                 <span className="text-gray-400">|</span>
-                <Link to="/partnerships" className="text-sm text-orange-700 font-semibold hover:text-orange-800 inline-flex items-center">
-                  Partners <ArrowRight className="ml-1 w-3 h-3" />
+                <Link to="/platforms" className="text-sm text-orange-700 font-semibold hover:text-orange-800 inline-flex items-center">
+                  Platforms <ArrowRight className="ml-1 w-3 h-3" />
                 </Link>
               </div>
             </div>

@@ -17,8 +17,8 @@ const Header: React.FC = () => {
     // Supporting Pages
     { name: 'Data Practice', path: '/data-practice' },
     { name: 'Technology', path: '/technology-stack' },
+    { name: 'Platforms', path: '/platforms' },
     { name: 'Case Studies', path: '/case-studies' },
-    { name: 'Partnerships', path: '/partnerships' },
     { name: 'Contact', path: '/contact' },
   ];
 

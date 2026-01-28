@@ -442,7 +442,7 @@ const Databricks: React.FC = () => {
               Contact Us
             </Link>
             <Link
-              to="/partnerships"
+              to="/platforms"
               className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
             >
               View All Partnerships

@@ -9,7 +9,7 @@ import MasterDataManagement from './pages/MasterDataManagement';
 import GenerativeAI from './pages/GenerativeAI';
 import TechnologyStack from './pages/TechnologyStack';
 import CaseStudies from './pages/CaseStudies';
-import Partnerships from './pages/Partnerships';
+import Platforms from './pages/Platforms';
 import DataTransformation from './pages/DataTransformation';
 import Contact from './pages/Contact';
 import Databricks from './pages/Databricks';
@@ -33,16 +33,16 @@ function App() {
           <Route path="/generative-ai" element={<GenerativeAI />} />
           <Route path="/data-practice" element={<DataPractice />} />
           <Route path="/technology-stack" element={<TechnologyStack />} />
+          <Route path="/platforms" element={<Platforms />} />
+          <Route path="/platforms/databricks" element={<Databricks />} />
+          <Route path="/platforms/snowflake" element={<Snowflake />} />
+          <Route path="/platforms/microsoft" element={<Microsoft />} />
+          <Route path="/platforms/aws" element={<AWS />} />
+          <Route path="/platforms/google-cloud" element={<GoogleCloud />} />
+          <Route path="/platforms/tableau" element={<Tableau />} />
+          <Route path="/platforms/collibra" element={<Collibra />} />
+          <Route path="/platforms/cloudera" element={<Cloudera />} />
           <Route path="/case-studies" element={<CaseStudies />} />
-          <Route path="/partnerships" element={<Partnerships />} />
-          <Route path="/partnerships/databricks" element={<Databricks />} />
-          <Route path="/partnerships/snowflake" element={<Snowflake />} />
-          <Route path="/partnerships/microsoft" element={<Microsoft />} />
-          <Route path="/partnerships/aws" element={<AWS />} />
-          <Route path="/partnerships/google-cloud" element={<GoogleCloud />} />
-          <Route path="/partnerships/tableau" element={<Tableau />} />
-          <Route path="/partnerships/collibra" element={<Collibra />} />
-          <Route path="/partnerships/cloudera" element={<Cloudera />} />
           <Route path="/data-transformation" element={<DataTransformation />} />
           <Route path="/contact" element={<Contact />} />
         </Route>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import { Award, Cloud, Database, BarChart3, Shield, Star, ArrowRight } from 'lucide-react';
 
-const Partnerships: React.FC = () => {
+const Platforms: React.FC = () => {
   const getColorClasses = (color: string) => {
     const colorMap: { [key: string]: { gradient: string; text: string } } = {
       blue: { gradient: 'bg-gradient-to-r from-blue-600 to-blue-700', text: 'text-blue-600' },
@@ -17,10 +17,10 @@ const Partnerships: React.FC = () => {
     return colorMap[color] || colorMap.blue;
   };
 
-  const partners = [
+  const platforms = [
     {
       name: 'Microsoft',
-      tier: 'Premier',
+      expertise: 'Expert',
       icon: Cloud,
       description: 'Azure, Power BI, Purview, Synapse Analytics',
       capabilities: [
@@ -31,11 +31,11 @@ const Partnerships: React.FC = () => {
         'Azure Machine Learning'
       ],
       color: 'blue',
-      deepDiveLink: '/partnerships/microsoft'
+      deepDiveLink: '/platforms/microsoft'
     },
     {
       name: 'Snowflake',
-      tier: 'Premier',
+      expertise: 'Expert',
       icon: Database,
       description: 'Cloud data platform and data warehouse',
       capabilities: [
@@ -46,11 +46,11 @@ const Partnerships: React.FC = () => {
         'Data Engineering'
       ],
       color: 'cyan',
-      deepDiveLink: '/partnerships/snowflake'
+      deepDiveLink: '/platforms/snowflake'
     },
     {
       name: 'Amazon Web Services (AWS)',
-      tier: 'Premier',
+      expertise: 'Expert',
       icon: Cloud,
       description: 'Complete cloud data and analytics platform',
       capabilities: [
@@ -61,11 +61,11 @@ const Partnerships: React.FC = () => {
         'Glue ETL Services'
       ],
       color: 'orange',
-      deepDiveLink: '/partnerships/aws'
+      deepDiveLink: '/platforms/aws'
     },
     {
       name: 'Databricks',
-      tier: 'Premier',
+      expertise: 'Expert',
       icon: Database,
       description: 'Unified analytics platform built on Apache Spark',
       capabilities: [
@@ -76,11 +76,11 @@ const Partnerships: React.FC = () => {
         'Collaborative Notebooks'
       ],
       color: 'red',
-      deepDiveLink: '/partnerships/databricks'
+      deepDiveLink: '/platforms/databricks'
     },
     {
       name: 'Google Cloud',
-      tier: 'Advanced',
+      expertise: 'Advanced',
       icon: Cloud,
       description: 'Google Cloud Platform data and AI services',
       capabilities: [
@@ -91,11 +91,11 @@ const Partnerships: React.FC = () => {
         'Data Catalog'
       ],
       color: 'green',
-      deepDiveLink: '/partnerships/google-cloud'
+      deepDiveLink: '/platforms/google-cloud'
     },
     {
       name: 'Tableau',
-      tier: 'Premier',
+      expertise: 'Expert',
       icon: BarChart3,
       description: 'Visual analytics and business intelligence',
       capabilities: [
@@ -106,11 +106,11 @@ const Partnerships: React.FC = () => {
         'Data Storytelling'
       ],
       color: 'blue',
-      deepDiveLink: '/partnerships/tableau'
+      deepDiveLink: '/platforms/tableau'
     },
     {
       name: 'Collibra',
-      tier: 'Advanced',
+      expertise: 'Advanced',
       icon: Shield,
       description: 'Data governance and catalog platform',
       capabilities: [
@@ -121,11 +121,11 @@ const Partnerships: React.FC = () => {
         'Workflow Automation'
       ],
       color: 'purple',
-      deepDiveLink: '/partnerships/collibra'
+      deepDiveLink: '/platforms/collibra'
     },
     {
       name: 'Cloudera',
-      tier: 'Partner',
+      expertise: 'Proficient',
       icon: Database,
       description: 'Enterprise data cloud platform',
       capabilities: [
@@ -136,7 +136,7 @@ const Partnerships: React.FC = () => {
         'Operational Database'
       ],
       color: 'indigo',
-      deepDiveLink: '/partnerships/cloudera'
+      deepDiveLink: '/platforms/cloudera'
     }
   ];
 
@@ -154,21 +154,21 @@ const Partnerships: React.FC = () => {
     {
       icon: Cloud,
       title: 'Best Practices',
-      description: 'Access to partner best practices and reference architectures'
+      description: 'Industry best practices and reference architectures'
     },
     {
       icon: BarChart3,
-      title: 'Innovation Access',
-      description: 'Early access to new features and beta programs'
+      title: 'Platform Agnostic',
+      description: 'We help you choose the right platform for your needs'
     }
   ];
 
   return (
     <div>
       <PageHeader
-        subtitle="Strategic Alliances"
-        title="Technology Partnerships"
-        description="Premier partnerships with leading data and cloud platforms to deliver best-in-class solutions"
+        subtitle="Data Platform Expertise"
+        title="Data Platforms"
+        description="Deep expertise across leading data and cloud platforms to deliver best-in-class solutions"
       />
 
       {/* Overview */}
@@ -176,14 +176,14 @@ const Partnerships: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Partner Ecosystem</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Platform Capabilities</h2>
               <p className="text-lg text-gray-700 mb-4">
-                Our strategic partnerships with leading technology vendors enable us to deliver cutting-edge solutions
-                and provide our clients with access to the latest innovations in data and analytics.
+                Our deep expertise across leading data platforms enables us to deliver cutting-edge solutions
+                tailored to your specific needs and technology preferences.
               </p>
               <p className="text-lg text-gray-700">
-                We maintain premier and advanced partnerships with major cloud platforms, data warehouses,
-                analytics tools, and governance platforms.
+                We bring certified professionals and proven methodologies across major cloud platforms,
+                data warehouses, analytics tools, and governance platforms.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-6">
@@ -199,48 +199,48 @@ const Partnerships: React.FC = () => {
         </div>
       </div>
 
-      {/* Partners Grid */}
+      {/* Platforms Grid */}
       <div className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Partners</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Platform Expertise</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Strategic partnerships across cloud, data, analytics, and governance platforms
+              Comprehensive capabilities across cloud, data, analytics, and governance platforms
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {partners.map((partner, index) => {
-              const colorClasses = getColorClasses(partner.color);
+            {platforms.map((platform, index) => {
+              const colorClasses = getColorClasses(platform.color);
               return (
                 <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
                   <div className={`${colorClasses.gradient} p-4`}>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center">
-                        <partner.icon className="w-8 h-8 text-white mr-3" />
+                        <platform.icon className="w-8 h-8 text-white mr-3" />
                         <div>
-                          <h3 className="text-xl font-semibold text-white">{partner.name}</h3>
-                          <p className="text-sm text-white opacity-90">{partner.description}</p>
+                          <h3 className="text-xl font-semibold text-white">{platform.name}</h3>
+                          <p className="text-sm text-white opacity-90">{platform.description}</p>
                         </div>
                       </div>
                       <span className="px-3 py-1 bg-white bg-opacity-20 text-white text-xs font-semibold rounded-full">
-                        {partner.tier}
+                        {platform.expertise}
                       </span>
                     </div>
                   </div>
                   <div className="p-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Key Capabilities:</h4>
                     <ul className="space-y-2">
-                      {partner.capabilities.map((capability, idx) => (
+                      {platform.capabilities.map((capability, idx) => (
                         <li key={idx} className="flex items-start">
                           <span className={`${colorClasses.text} mr-2`}>•</span>
                           <span className="text-gray-700">{capability}</span>
                         </li>
                       ))}
                     </ul>
-                    {(partner as any).deepDiveLink && (
+                    {platform.deepDiveLink && (
                       <Link
-                        to={(partner as any).deepDiveLink}
+                        to={platform.deepDiveLink}
                         className={`inline-flex items-center mt-4 ${colorClasses.text} font-semibold hover:underline`}
                       >
                         Learn More <ArrowRight className="w-4 h-4 ml-1" />
@@ -254,20 +254,20 @@ const Partnerships: React.FC = () => {
         </div>
       </div>
 
-      {/* Partnership Tiers */}
+      {/* Expertise Levels */}
       <div className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Partnership Tiers</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Expertise Levels</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-lg p-6 border-2 border-yellow-400">
               <div className="text-center">
                 <Award className="w-12 h-12 text-yellow-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Premier</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Expert</h3>
                 <p className="text-gray-700">
-                  Highest level partnerships with advanced certifications, dedicated support, and co-innovation programs
+                  Highest level expertise with advanced certifications, dedicated practice teams, and extensive implementation experience
                 </p>
               </div>
             </div>
@@ -276,16 +276,16 @@ const Partnerships: React.FC = () => {
                 <Star className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Advanced</h3>
                 <p className="text-gray-700">
-                  Strong partnerships with certified professionals and proven track record of successful implementations
+                  Strong expertise with certified professionals and proven track record of successful implementations
                 </p>
               </div>
             </div>
             <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg p-6 border-2 border-gray-400">
               <div className="text-center">
                 <Cloud className="w-12 h-12 text-gray-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Partner</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Proficient</h3>
                 <p className="text-gray-700">
-                  Established partnerships with expertise in implementation and support services
+                  Solid capabilities with trained professionals and growing implementation experience
                 </p>
               </div>
             </div>
@@ -296,4 +296,4 @@ const Partnerships: React.FC = () => {
   );
 };
 
-export default Partnerships;
+export default Platforms;
