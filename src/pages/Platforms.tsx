@@ -31,7 +31,8 @@ const Platforms: React.FC = () => {
         'Azure Machine Learning'
       ],
       color: 'blue',
-      deepDiveLink: '/platforms/microsoft'
+      deepDiveLink: '/platforms/microsoft',
+      relatedCategories: ['Cloud & Infrastructure', 'Analytics & Visualization', 'Data Governance & Quality']
     },
     {
       name: 'Snowflake',
@@ -46,7 +47,8 @@ const Platforms: React.FC = () => {
         'Data Engineering'
       ],
       color: 'cyan',
-      deepDiveLink: '/platforms/snowflake'
+      deepDiveLink: '/platforms/snowflake',
+      relatedCategories: ['Data Warehousing', 'AI & Machine Learning']
     },
     {
       name: 'Amazon Web Services (AWS)',
@@ -61,7 +63,8 @@ const Platforms: React.FC = () => {
         'Glue ETL Services'
       ],
       color: 'orange',
-      deepDiveLink: '/platforms/aws'
+      deepDiveLink: '/platforms/aws',
+      relatedCategories: ['Cloud & Infrastructure', 'Data Integration & Orchestration', 'Data Warehousing']
     },
     {
       name: 'Databricks',
@@ -76,7 +79,8 @@ const Platforms: React.FC = () => {
         'Collaborative Notebooks'
       ],
       color: 'red',
-      deepDiveLink: '/platforms/databricks'
+      deepDiveLink: '/platforms/databricks',
+      relatedCategories: ['Big Data & Distributed Systems', 'Data Warehousing', 'AI & Machine Learning']
     },
     {
       name: 'Google Cloud',
@@ -91,7 +95,8 @@ const Platforms: React.FC = () => {
         'Data Catalog'
       ],
       color: 'green',
-      deepDiveLink: '/platforms/google-cloud'
+      deepDiveLink: '/platforms/google-cloud',
+      relatedCategories: ['Cloud & Infrastructure', 'Data Warehousing', 'AI & Machine Learning']
     },
     {
       name: 'Tableau',
@@ -106,7 +111,8 @@ const Platforms: React.FC = () => {
         'Data Storytelling'
       ],
       color: 'blue',
-      deepDiveLink: '/platforms/tableau'
+      deepDiveLink: '/platforms/tableau',
+      relatedCategories: ['Analytics & Visualization']
     },
     {
       name: 'Collibra',
@@ -121,7 +127,8 @@ const Platforms: React.FC = () => {
         'Workflow Automation'
       ],
       color: 'purple',
-      deepDiveLink: '/platforms/collibra'
+      deepDiveLink: '/platforms/collibra',
+      relatedCategories: ['Data Governance & Quality']
     },
     {
       name: 'Cloudera',
@@ -136,7 +143,8 @@ const Platforms: React.FC = () => {
         'Operational Database'
       ],
       color: 'indigo',
-      deepDiveLink: '/platforms/cloudera'
+      deepDiveLink: '/platforms/cloudera',
+      relatedCategories: ['Big Data & Distributed Systems']
     },
     {
       name: 'AI & Machine Learning',
@@ -151,7 +159,8 @@ const Platforms: React.FC = () => {
         'Snowflake Cortex'
       ],
       color: 'purple',
-      deepDiveLink: '/platforms/ai-ml'
+      deepDiveLink: '/platforms/ai-ml',
+      relatedCategories: ['AI & Machine Learning']
     }
   ];
 
@@ -196,10 +205,16 @@ const Platforms: React.FC = () => {
                 Our deep expertise across leading data platforms enables us to deliver cutting-edge solutions
                 tailored to your specific needs and technology preferences.
               </p>
-              <p className="text-lg text-gray-700">
+              <p className="text-lg text-gray-700 mb-4">
                 We bring certified professionals and proven methodologies across major cloud platforms,
                 data warehouses, analytics tools, and governance platforms.
               </p>
+              <Link
+                to="/technology-stack"
+                className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700"
+              >
+                View technology categories <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
             </div>
             <div className="grid grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
@@ -245,7 +260,7 @@ const Platforms: React.FC = () => {
                   </div>
                   <div className="p-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Key Capabilities:</h4>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2 mb-4">
                       {platform.capabilities.map((capability, idx) => (
                         <li key={idx} className="flex items-start">
                           <span className={`${colorClasses.text} mr-2`}>•</span>
@@ -253,10 +268,26 @@ const Platforms: React.FC = () => {
                         </li>
                       ))}
                     </ul>
+                    {platform.relatedCategories && platform.relatedCategories.length > 0 && (
+                      <div className="pt-3 border-t border-gray-100 mb-4">
+                        <p className="text-xs text-gray-500 uppercase tracking-wide mb-2">Technology Categories</p>
+                        <div className="flex flex-wrap gap-1">
+                          {platform.relatedCategories.map((category, idx) => (
+                            <Link
+                              key={idx}
+                              to="/technology-stack"
+                              className="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded hover:bg-gray-200 transition-colors"
+                            >
+                              {category}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                     {platform.deepDiveLink && (
                       <Link
                         to={platform.deepDiveLink}
-                        className={`inline-flex items-center mt-4 ${colorClasses.text} font-semibold hover:underline`}
+                        className={`inline-flex items-center ${colorClasses.text} font-semibold hover:underline`}
                       >
                         Learn More <ArrowRight className="w-4 h-4 ml-1" />
                       </Link>

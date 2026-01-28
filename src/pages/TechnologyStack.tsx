@@ -17,6 +17,11 @@ const TechnologyStack: React.FC = () => {
         'Cloud Storage & Data Lakes',
         'Virtual Networks & Security',
         'Multi-cloud Architecture'
+      ],
+      relatedPlatforms: [
+        { name: 'Microsoft Azure', path: '/platforms/microsoft' },
+        { name: 'AWS', path: '/platforms/aws' },
+        { name: 'Google Cloud', path: '/platforms/google-cloud' }
       ]
     },
     {
@@ -32,6 +37,10 @@ const TechnologyStack: React.FC = () => {
         'Apache Cassandra',
         'MongoDB',
         'Elasticsearch'
+      ],
+      relatedPlatforms: [
+        { name: 'Databricks', path: '/platforms/databricks' },
+        { name: 'Cloudera', path: '/platforms/cloudera' }
       ]
     },
     {
@@ -47,6 +56,10 @@ const TechnologyStack: React.FC = () => {
         'Data Storytelling',
         'Mobile Analytics',
         'Augmented Analytics'
+      ],
+      relatedPlatforms: [
+        { name: 'Tableau', path: '/platforms/tableau' },
+        { name: 'Microsoft Power BI', path: '/platforms/microsoft' }
       ]
     },
     {
@@ -62,6 +75,12 @@ const TechnologyStack: React.FC = () => {
         'Data Mesh',
         'Real-time Analytics',
         'Query Optimization'
+      ],
+      relatedPlatforms: [
+        { name: 'Snowflake', path: '/platforms/snowflake' },
+        { name: 'Databricks', path: '/platforms/databricks' },
+        { name: 'AWS Redshift', path: '/platforms/aws' },
+        { name: 'Google BigQuery', path: '/platforms/google-cloud' }
       ]
     },
     {
@@ -77,6 +96,11 @@ const TechnologyStack: React.FC = () => {
         'Data Quality Pipelines',
         'Streaming Ingestion',
         'Batch Processing'
+      ],
+      relatedPlatforms: [
+        { name: 'AWS Glue', path: '/platforms/aws' },
+        { name: 'Azure Data Factory', path: '/platforms/microsoft' },
+        { name: 'Databricks', path: '/platforms/databricks' }
       ]
     },
     {
@@ -92,6 +116,10 @@ const TechnologyStack: React.FC = () => {
         'Privacy & Compliance',
         'Master Data Management',
         'Reference Data Management'
+      ],
+      relatedPlatforms: [
+        { name: 'Collibra', path: '/platforms/collibra' },
+        { name: 'Microsoft Purview', path: '/platforms/microsoft' }
       ]
     },
     {
@@ -107,6 +135,11 @@ const TechnologyStack: React.FC = () => {
         'Deep Learning',
         'Natural Language Processing',
         'Computer Vision'
+      ],
+      relatedPlatforms: [
+        { name: 'AI/ML Platforms', path: '/platforms/ai-ml' },
+        { name: 'Databricks ML', path: '/platforms/databricks' },
+        { name: 'Snowflake Cortex', path: '/platforms/snowflake' }
       ]
     }
   ];
@@ -189,13 +222,30 @@ const TechnologyStack: React.FC = () => {
                     <p className="text-sm text-gray-600">{category.description}</p>
                   </div>
                 </div>
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-2 gap-2 mb-4">
                   {category.technologies.map((tech, idx) => (
                     <div key={idx} className="px-3 py-2 bg-gray-50 rounded text-sm text-gray-700">
                       {tech}
                     </div>
                   ))}
                 </div>
+                {category.relatedPlatforms && category.relatedPlatforms.length > 0 && (
+                  <div className="pt-4 border-t border-gray-100">
+                    <p className="text-xs text-gray-500 uppercase tracking-wide mb-2">Related Platforms</p>
+                    <div className="flex flex-wrap gap-2">
+                      {category.relatedPlatforms.map((platform, idx) => (
+                        <Link
+                          key={idx}
+                          to={platform.path}
+                          className="inline-flex items-center px-3 py-1 bg-blue-50 text-blue-700 text-sm rounded-full hover:bg-blue-100 transition-colors"
+                        >
+                          {platform.name}
+                          <ArrowRight className="w-3 h-3 ml-1" />
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
