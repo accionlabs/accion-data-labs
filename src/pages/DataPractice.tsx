@@ -46,7 +46,7 @@ const DataPractice: React.FC = () => {
       expertiseTags: ['Digital Transformation', 'Enterprise Architecture', 'Industry 4.0', 'Data Analytics', 'Business Process Optimization'],
       initials: 'MG',
       photoUrl: 'https://media.licdn.com/dms/image/v2/D4D03AQFjV8fs6TO_9g/profile-displayphoto-scale_400_400/B4DZqNob4.GgAg-/0/1763312780733?e=1771459200&v=beta&t=Eg0ZVJ_slAOUHcrq_p6jDwg5d_LYhSI825KdVrt0gOg',
-      journeyPhases: ['Phase 1: Assess', 'Phase 4: Transform']
+      journeyPhases: ['Phase 1: Assess', 'Phase 4: Transform', 'Phase 5: Innovate with AI']
     },
     {
       name: 'Nischal Doshi',
