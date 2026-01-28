@@ -20,6 +20,7 @@ import GoogleCloud from './pages/GoogleCloud';
 import Tableau from './pages/Tableau';
 import Collibra from './pages/Collibra';
 import Cloudera from './pages/Cloudera';
+import AIMLPlatforms from './pages/AIMLPlatforms';
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
           <Route path="/platforms/tableau" element={<Tableau />} />
           <Route path="/platforms/collibra" element={<Collibra />} />
           <Route path="/platforms/cloudera" element={<Cloudera />} />
+          <Route path="/platforms/ai-ml" element={<AIMLPlatforms />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/data-transformation" element={<DataTransformation />} />
           <Route path="/contact" element={<Contact />} />

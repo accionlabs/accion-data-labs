@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
-import { Award, Cloud, Database, BarChart3, Shield, Star, ArrowRight } from 'lucide-react';
+import { Award, Cloud, Database, BarChart3, Shield, Star, ArrowRight, Brain } from 'lucide-react';
 
 const Platforms: React.FC = () => {
   const getColorClasses = (color: string) => {
@@ -137,6 +137,21 @@ const Platforms: React.FC = () => {
       ],
       color: 'indigo',
       deepDiveLink: '/platforms/cloudera'
+    },
+    {
+      name: 'AI & Machine Learning',
+      expertise: 'Expert',
+      icon: Brain,
+      description: 'Enterprise AI/ML platforms across all major clouds',
+      capabilities: [
+        'Amazon SageMaker',
+        'Azure Machine Learning',
+        'Google Vertex AI',
+        'Databricks ML & MLflow',
+        'Snowflake Cortex'
+      ],
+      color: 'purple',
+      deepDiveLink: '/platforms/ai-ml'
     }
   ];
 
