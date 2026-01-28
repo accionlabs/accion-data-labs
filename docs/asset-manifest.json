@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/accion-data-labs/static/css/main.9633de20.css",
+    "main.js": "/accion-data-labs/static/js/main.119afc0c.js",
+    "static/js/453.646bfcbc.chunk.js": "/accion-data-labs/static/js/453.646bfcbc.chunk.js",
+    "index.html": "/accion-data-labs/index.html",
+    "main.9633de20.css.map": "/accion-data-labs/static/css/main.9633de20.css.map",
+    "main.119afc0c.js.map": "/accion-data-labs/static/js/main.119afc0c.js.map",
+    "453.646bfcbc.chunk.js.map": "/accion-data-labs/static/js/453.646bfcbc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9633de20.css",
+    "static/js/main.119afc0c.js"
+  ]
+}
