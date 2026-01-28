@@ -51,7 +51,7 @@ const Header: React.FC = () => {
 
   // Generate breadcrumbs
   const pathnames = location.pathname.split('/').filter((x) => x);
-  const showBreadcrumbs = pathnames.length > 0;
+  const isHomePage = pathnames.length === 0;
 
   const breadcrumbs = [{ label: 'Home', path: '/' }];
   let currentPath = '';
@@ -88,9 +88,6 @@ const Header: React.FC = () => {
                 {item.name}
               </Link>
             ))}
-            <div className="ml-2 pl-2 border-l border-gray-200">
-              <SearchBar />
-            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -130,44 +127,57 @@ const Header: React.FC = () => {
         )}
       </nav>
 
-      {/* Breadcrumbs - part of the fixed header */}
-      {showBreadcrumbs && (
-        <div className="bg-gray-50 border-t border-gray-200">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <ol className="flex items-center h-9 space-x-2 text-sm">
-              {breadcrumbs.map((crumb, index) => {
-                const isLast = index === breadcrumbs.length - 1;
+      {/* Breadcrumbs row with Search */}
+      <div className="bg-gray-50 border-t border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-10">
+            {/* Breadcrumbs */}
+            <ol className="flex items-center space-x-2 text-sm">
+              {isHomePage ? (
+                <li className="flex items-center text-gray-500">
+                  <Home className="w-4 h-4 mr-1" />
+                  <span>Home</span>
+                </li>
+              ) : (
+                breadcrumbs.map((crumb, index) => {
+                  const isLast = index === breadcrumbs.length - 1;
 
-                return (
-                  <li key={crumb.path} className="flex items-center">
-                    {index > 0 && (
-                      <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
-                    )}
-                    {index === 0 ? (
-                      <Link
-                        to={crumb.path}
-                        className="text-gray-500 hover:text-blue-600 transition-colors flex items-center"
-                      >
-                        <Home className="w-4 h-4" />
-                        <span className="sr-only">Home</span>
-                      </Link>
-                    ) : isLast ? (
-                      <span className="text-gray-900 font-medium">{crumb.label}</span>
-                    ) : (
-                      <Link
-                        to={crumb.path}
-                        className="text-gray-500 hover:text-blue-600 transition-colors"
-                      >
-                        {crumb.label}
-                      </Link>
-                    )}
-                  </li>
-                );
-              })}
+                  return (
+                    <li key={crumb.path} className="flex items-center">
+                      {index > 0 && (
+                        <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
+                      )}
+                      {index === 0 ? (
+                        <Link
+                          to={crumb.path}
+                          className="text-gray-500 hover:text-blue-600 transition-colors flex items-center"
+                        >
+                          <Home className="w-4 h-4" />
+                          <span className="sr-only">Home</span>
+                        </Link>
+                      ) : isLast ? (
+                        <span className="text-gray-900 font-medium">{crumb.label}</span>
+                      ) : (
+                        <Link
+                          to={crumb.path}
+                          className="text-gray-500 hover:text-blue-600 transition-colors"
+                        >
+                          {crumb.label}
+                        </Link>
+                      )}
+                    </li>
+                  );
+                })
+              )}
             </ol>
+
+            {/* Search - Desktop only (mobile has it in menu) */}
+            <div className="hidden lg:block">
+              <SearchBar />
+            </div>
           </div>
         </div>
-      )}
+      </div>
     </header>
   );
 };
