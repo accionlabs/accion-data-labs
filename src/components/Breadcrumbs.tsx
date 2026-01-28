@@ -41,7 +41,7 @@ const Breadcrumbs: React.FC = () => {
   });
 
   return (
-    <div className="bg-white border-b border-gray-200 sticky top-0 z-30 lg:z-10">
+    <div className="bg-white border-b border-gray-200 shadow-sm">
       <div className="px-4 sm:px-6 lg:px-8">
         <ol className="flex items-center space-x-2 text-sm h-12">
           {breadcrumbs.map((crumb, index) => {
