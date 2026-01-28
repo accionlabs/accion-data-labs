@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Database, Shield, TrendingUp, Users, Workflow, Award, ArrowRight, Brain, Zap, Target, Layers, Rocket, CheckCircle } from 'lucide-react';
+import { Database, Shield, TrendingUp, Users, Workflow, Award, ArrowRight, Brain, Zap, Target, Layers, Rocket, CheckCircle, Mail } from 'lucide-react';
+import Footer from '../components/Footer';
 
 const Home: React.FC = () => {
   const capabilities = [
@@ -74,7 +75,48 @@ const Home: React.FC = () => {
   ];
 
   return (
-    <div>
+    <div className="min-h-screen flex flex-col">
+      {/* Simple Header for Home Page */}
+      <header className="bg-white shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <Link to="/" className="flex items-center space-x-2">
+              <Database className="h-8 w-8 text-blue-600" />
+              <span className="text-xl font-bold text-gray-900">Accion Data Labs</span>
+            </Link>
+            <nav className="flex items-center space-x-4">
+              <Link
+                to="/data-strategy"
+                className="hidden sm:inline-flex text-gray-600 hover:text-blue-600 text-sm font-medium transition-colors"
+              >
+                Capabilities
+              </Link>
+              <Link
+                to="/platforms"
+                className="hidden sm:inline-flex text-gray-600 hover:text-blue-600 text-sm font-medium transition-colors"
+              >
+                Platforms
+              </Link>
+              <Link
+                to="/case-studies"
+                className="hidden sm:inline-flex text-gray-600 hover:text-blue-600 text-sm font-medium transition-colors"
+              >
+                Case Studies
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+              >
+                <Mail className="w-4 h-4 mr-2" />
+                Contact
+              </Link>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <main className="flex-grow">
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -366,6 +408,10 @@ const Home: React.FC = () => {
           </Link>
         </div>
       </div>
+      </main>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

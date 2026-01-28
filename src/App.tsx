@@ -26,8 +26,11 @@ function App() {
   return (
     <Router basename="/accion-data-labs">
       <Routes>
+        {/* Home page without sidebar */}
+        <Route path="/" element={<Home />} />
+
+        {/* All other pages with sidebar layout */}
         <Route element={<AppLayout />}>
-          <Route path="/" element={<Home />} />
           <Route path="/data-governance" element={<DataGovernance />} />
           <Route path="/data-strategy" element={<DataStrategy />} />
           <Route path="/master-data-management" element={<MasterDataManagement />} />

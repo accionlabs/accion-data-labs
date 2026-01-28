@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/accion-data-labs/static/css/main.ca3a3176.css",
-    "main.js": "/accion-data-labs/static/js/main.68107372.js",
+    "main.css": "/accion-data-labs/static/css/main.9e752cb6.css",
+    "main.js": "/accion-data-labs/static/js/main.a78409e1.js",
     "static/js/453.646bfcbc.chunk.js": "/accion-data-labs/static/js/453.646bfcbc.chunk.js",
     "index.html": "/accion-data-labs/index.html",
-    "main.ca3a3176.css.map": "/accion-data-labs/static/css/main.ca3a3176.css.map",
-    "main.68107372.js.map": "/accion-data-labs/static/js/main.68107372.js.map",
+    "main.9e752cb6.css.map": "/accion-data-labs/static/css/main.9e752cb6.css.map",
+    "main.a78409e1.js.map": "/accion-data-labs/static/js/main.a78409e1.js.map",
     "453.646bfcbc.chunk.js.map": "/accion-data-labs/static/js/453.646bfcbc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca3a3176.css",
-    "static/js/main.68107372.js"
+    "static/css/main.9e752cb6.css",
+    "static/js/main.a78409e1.js"
   ]
 }
